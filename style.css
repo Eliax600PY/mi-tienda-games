@@ -1,0 +1,276 @@
+/* ===== RESET ===== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ===== BODY ===== */
+
+body{
+  background:#02131f;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* ===== PARTICULAS ===== */
+
+.particles{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-image:
+  radial-gradient(#00ffee 1px, transparent 1px);
+
+  background-size:50px 50px;
+
+  opacity:0.1;
+
+  animation: moveParticles 20s linear infinite;
+
+  z-index:-1;
+}
+
+@keyframes moveParticles{
+
+  from{
+    transform:translateY(0);
+  }
+
+  to{
+    transform:translateY(-200px);
+  }
+}
+
+/* ===== NAVBAR ===== */
+
+header{
+  width:100%;
+  height:80px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:0 80px;
+
+  background:rgba(0,0,0,0.5);
+
+  backdrop-filter:blur(10px);
+
+  position:sticky;
+  top:0;
+
+  z-index:1000;
+
+  border-bottom:1px solid #00ffee;
+}
+
+.logo{
+  font-size:32px;
+  font-weight:bold;
+
+  color:#00ffee;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+
+  margin:0 15px;
+
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#00ffee;
+}
+
+.icons i{
+  margin-left:20px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.icons i:hover{
+  color:#00ffee;
+  transform:scale(1.2);
+}
+
+/* ===== HERO ===== */
+
+.hero{
+  position:relative;
+
+  width:100%;
+  height:600px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  overflow:hidden;
+}
+
+.hero-img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  filter:brightness(40%);
+}
+
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:linear-gradient(to right,
+  rgba(0,0,0,0.8),
+  rgba(0,0,0,0.2));
+}
+
+.hero-content{
+  position:absolute;
+
+  left:10%;
+
+  max-width:600px;
+
+  animation:fadeUp 1.5s ease;
+}
+
+.hero-content h1{
+  font-size:60px;
+  margin-bottom:20px;
+}
+
+.hero-content p{
+  font-size:20px;
+  line-height:1.6;
+  margin-bottom:30px;
+}
+
+.hero-content button{
+  padding:15px 40px;
+
+  border:none;
+  border-radius:10px;
+
+  background:#00ffee;
+
+  color:black;
+
+  font-size:18px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.hero-content button:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 20px #00ffee;
+}
+
+/* ===== ANIMACION ===== */
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(80px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ===== JUEGOS ===== */
+
+.games-section{
+  padding:80px;
+}
+
+.title h2{
+  font-size:40px;
+  margin-bottom:40px;
+}
+
+.games-container{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+/* ===== CARD ===== */
+
+.card{
+  width:250px;
+
+  background:#072334;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  transition:0.4s;
+
+  cursor:pointer;
+
+  position:relative;
+}
+
+.card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+}
+
+.card h3{
+  padding:20px;
+}
+
+.card:hover{
+  transform:translateY(-15px) scale(1.03);
+
+  box-shadow:0 0 25px #00ffee;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+  text-align:center;
+  padding:30px;
+
+  margin-top:50px;
+
+  background:#03111c;
+
+  border-top:1px solid #00ffee;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:900px){
+
+  header{
+    padding:20px;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .hero-content h1{
+    font-size:40px;
+  }
+
+  .games-container{
+    justify-content:center;
+  }
+}
